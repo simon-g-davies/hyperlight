@@ -77,6 +77,8 @@ impl HypervLinuxDriver {
     /// the underlying virtual CPU after this function returns. Call the
     /// `apply_registers` method to do that, or more likely call
     /// `initialise` to do it for you.
+    ///
+    
     #[instrument(skip_all, parent = Span::current(), level = "Trace")]
     pub(super) fn new(
         mem_regions: Vec<MemoryRegion>,
